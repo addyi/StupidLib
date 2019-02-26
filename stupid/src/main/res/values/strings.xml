@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Stupid</string>
+    <string name="app_name" translatable="false">Stupid</string>
+    <string name="stupid">stupid</string>
 </resources>
