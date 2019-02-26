@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import de.eosn.deepthought.answerToTheUltimateQuestionOfLifeTheUniverseAndEverything
 import de.eosn.stupid.Stupid
 import de.eosn.stupid.math.add
+import de.eosn.stupid.math.answerTimes
 import de.eosn.stupid.math.mul
 import de.eosn.stupid.math.sub
 
@@ -24,5 +26,9 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "FYI: $a + $b = ${add(a, b)}")
         Log.i(TAG, "FYI: $a - $b = ${sub(a, b)}")
         Log.i(TAG, "FYI: $a * $b = ${mul(a, b)}")
+
+        Log.i(TAG, "Answer is: ${answerTimes(1)}")
+
+        Log.i(TAG, "Can be used here because of api ${answerToTheUltimateQuestionOfLifeTheUniverseAndEverything()}")
     }
 }
