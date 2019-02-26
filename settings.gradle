@@ -1,1 +1,1 @@
-include ':app', ':stupid'
+include ':app', ':stupid', ':math'
