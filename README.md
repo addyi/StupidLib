@@ -13,7 +13,7 @@ Stupid.forLocal(Locale.ROOT) // default value (stupid)
 Stupid.forLocal(Locale.JAPANESE) // unsupported local => default value (stupid)
 ```
 
-More examples can be found in [StupidTest](stupid/src/androidTest/java/de/eosn/stupid/StupidTest)
+More examples can be found in [StupidTest](stupid/src/androidTest/java/de/eosn/stupid/StupidTest.kt)
 
 This project can also be build as example Android App
 
