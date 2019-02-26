@@ -1,5 +1,12 @@
 # StupidLib
 
+[![](https://jitpack.io/v/addyi/StupidLib.svg)](https://jitpack.io/#addyi/StupidLib)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
+[![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
+
 This is a stupid Android Library. It was created for test purposes. StupidLib provides an interface to request the word `stupid` for different locals.
 
 ## Usage
@@ -34,6 +41,29 @@ Supported Locals:
 - `Locale.CANADA_FRENCH`
 - `Locale.KOREA`
 - `Locale.KOREAN`
+
+## Including in your project
+
+StupidLib is available via [JitPack](https://jitpack.io/#addyi/StupidLib), so getting it is simple:
+
+**Step 1.** Add the JitPack repository to your root build file
+
+```groovy
+    allprojects {
+        repositories {
+            // ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+```
+
+**Step 2.** Add the dependency
+
+```groovy
+    dependencies {
+        implementation 'com.github.addyi:StupidLib:Tag'
+    }
+```
 
 
 ## Licence
