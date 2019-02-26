@@ -12,19 +12,19 @@ This is a stupid Android Library. It was created for test purposes. StupidLib pr
 ## Usage
 
 ```kotlin
-Stupid.forLocal(Locale.ENGLISH) // stupid
-Stupid.forLocal(Locale.GERMAN) // blöd
-Stupid.forLocal() // device local
-Stupid.forLocal(null) // device local
-Stupid.forLocal(Locale.ROOT) // default value (stupid)
-Stupid.forLocal(Locale.JAPANESE) // unsupported local => default value (stupid)
+Stupid.forLocale(Locale.ENGLISH) // stupid
+Stupid.forLocale(Locale.GERMAN) // blöd
+Stupid.forLocale() // device locale
+Stupid.forLocale(null) // device locale
+Stupid.forLocale(Locale.ROOT) // default value (stupid)
+Stupid.forLocale(Locale.JAPANESE) // unsupported locale => default value (stupid)
 ```
 
 More examples can be found in [StupidTest](stupid/src/androidTest/java/de/eosn/stupid/StupidTest.kt)
 
 This project can also be build as example Android App
 
-## Local
+## Locale
 
 Supported Locals:
 
@@ -61,10 +61,11 @@ StupidLib is available via [JitPack](https://jitpack.io/#addyi/StupidLib), so ge
 
 ```groovy
     dependencies {
-        implementation 'com.github.addyi:StupidLib:Tag'
+        implementation 'com.github.addyi:StupidLib:{version}'
     }
 ```
 
+Replace `{version}` with [latest](https://github.com/addyi/StupidLib/releases/latest) Version Tag
 
 ## Licence
 
