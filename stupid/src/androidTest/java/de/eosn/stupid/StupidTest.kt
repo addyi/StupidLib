@@ -11,22 +11,22 @@ class StupidTest {
     fun testSupportedLocal() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
 
-        assertEquals(appContext.resources.getString(R.string.stupid), Stupid.forLocal())
-        assertEquals("stupid", Stupid.forLocal(Locale.ROOT))
-        assertEquals(appContext.resources.getString(R.string.stupid), Stupid.forLocal(null))
-        assertEquals("stupid", Stupid.forLocal(Locale.UK))
-        assertEquals("stupid", Stupid.forLocal(Locale.ENGLISH))
-        assertEquals("stupid", Stupid.forLocal(Locale.CANADA))
-        assertEquals("stupid", Stupid.forLocal(Locale.US))
-        assertEquals("blöd", Stupid.forLocal(Locale.GERMANY))
-        assertEquals("blöd", Stupid.forLocal(Locale.GERMAN))
-        assertEquals("stupido", Stupid.forLocal(Locale.ITALIAN))
-        assertEquals("stupido", Stupid.forLocal(Locale.ITALY))
-        assertEquals("stupide", Stupid.forLocal(Locale.FRANCE))
-        assertEquals("stupide", Stupid.forLocal(Locale.FRENCH))
-        assertEquals("stupide", Stupid.forLocal(Locale.CANADA_FRENCH))
-        assertEquals("바보", Stupid.forLocal(Locale.KOREA))
-        assertEquals("바보", Stupid.forLocal(Locale.KOREAN))
+        assertEquals(appContext.resources.getString(R.string.stupid), Stupid.forLocale())
+        assertEquals("stupid", Stupid.forLocale(Locale.ROOT))
+        assertEquals(appContext.resources.getString(R.string.stupid), Stupid.forLocale(null))
+        assertEquals("stupid", Stupid.forLocale(Locale.UK))
+        assertEquals("stupid", Stupid.forLocale(Locale.ENGLISH))
+        assertEquals("stupid", Stupid.forLocale(Locale.CANADA))
+        assertEquals("stupid", Stupid.forLocale(Locale.US))
+        assertEquals("blöd", Stupid.forLocale(Locale.GERMANY))
+        assertEquals("blöd", Stupid.forLocale(Locale.GERMAN))
+        assertEquals("stupido", Stupid.forLocale(Locale.ITALIAN))
+        assertEquals("stupido", Stupid.forLocale(Locale.ITALY))
+        assertEquals("stupide", Stupid.forLocale(Locale.FRANCE))
+        assertEquals("stupide", Stupid.forLocale(Locale.FRENCH))
+        assertEquals("stupide", Stupid.forLocale(Locale.CANADA_FRENCH))
+        assertEquals("바보", Stupid.forLocale(Locale.KOREA))
+        assertEquals("바보", Stupid.forLocale(Locale.KOREAN))
     }
 
     @Test
@@ -34,14 +34,14 @@ class StupidTest {
 
         // ATTENTION: This test is not conclusive for all locals
 
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.JAPANESE))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.JAPAN))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.CHINESE))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.CHINA))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.PRC))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.SIMPLIFIED_CHINESE))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.TAIWAN))
-        assertEquals(Stupid.forLocal(Locale.ROOT), Stupid.forLocal(Locale.TRADITIONAL_CHINESE))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.JAPANESE))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.JAPAN))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.CHINESE))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.CHINA))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.PRC))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.SIMPLIFIED_CHINESE))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.TAIWAN))
+        assertEquals(Stupid.forLocale(Locale.ROOT), Stupid.forLocale(Locale.TRADITIONAL_CHINESE))
     }
 
 }

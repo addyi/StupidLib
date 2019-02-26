@@ -15,7 +15,7 @@ class Stupid {
         private val TAG: String = Stupid::class.java.simpleName
 
         @JvmStatic
-        fun forLocal(locale: Locale?): String {
+        fun forLocale(locale: Locale?): String {
             val context = ApplicationProvider.application
             return if (context != null) {
                 getLocalizedResources(context, locale).getString(R.string.stupid)
@@ -28,8 +28,8 @@ class Stupid {
         }
 
         @JvmStatic
-        fun forLocal(): String {
-            return forLocal(null)
+        fun forLocale(): String {
+            return forLocale(null)
         }
 
         private fun getLocalizedResources(context: Application, desiredLocale: Locale?): Resources {

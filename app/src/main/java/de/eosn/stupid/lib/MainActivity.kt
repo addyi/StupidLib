@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<TextView>(R.id.stupidTextView).text = Stupid.forLocal()
+        findViewById<TextView>(R.id.stupidTextView).text = Stupid.forLocale()
     }
 }
