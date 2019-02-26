@@ -5,9 +5,6 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.util.Log
 import com.github.florent37.application.provider.ApplicationProvider
-import de.eosn.stupid.math.add
-import de.eosn.stupid.math.mul
-import de.eosn.stupid.math.sub
 import java.util.*
 
 
@@ -32,13 +29,6 @@ class Stupid {
 
         @JvmStatic
         fun forLocale(): String {
-
-            val a = 4
-            val b = 6
-            Log.i(TAG, "FYI: $a + $b = ${add(a, b)}")
-            Log.i(TAG, "FYI: $a - $b = ${sub(a, b)}")
-            Log.i(TAG, "FYI: $a * $b = ${mul(a, b)}")
-
             return forLocale(null)
         }
 
