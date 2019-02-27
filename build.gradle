@@ -1,18 +1,34 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    ext.kotlin_version = '1.3.21'
+
+    ext.buildConfig = [
+            'minSdkVersion'    : 17,
+            'compileSdkVersion': 28,
+            'targetSdkVersion' : 28,
+            'kotlinVersion'    : '1.3.21'
+    ]
+
+    ext.deps = [
+            'kotlinStdlib'            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$buildConfig.kotlinVersion",
+
+            'androidXConstraintLayout': 'androidx.constraintlayout:constraintlayout:1.1.3',
+
+            'androidXTestRunner'      : 'androidx.test:runner:1.1.1',
+            'androidXTestEspresso'    : 'androidx.test.espresso:espresso-core:3.1.1',
+
+            'junit'                   : 'junit:junit:4.12',
+
+            'applicationprovider'     : 'com.github.florent37:applicationprovider:1.0.0'
+    ]
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$buildConfig.kotlinVersion"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+
     repositories {
         google()
         jcenter()
-
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
@@ -20,7 +36,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://jitpack.io' }
 
     }
 }
