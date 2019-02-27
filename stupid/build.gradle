@@ -2,16 +2,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.github.dcendents.android-maven'
-group= 'com.github.addyi'
+group = 'com.github.addyi'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion buildConfig.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion buildConfig.minSdkVersion
+        targetSdkVersion buildConfig.targetSdkVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,11 +23,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlinStdlib
 
-    implementation 'com.github.florent37:applicationprovider:1.0.0'
+    implementation deps.applicationprovider
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    testImplementation deps.junit
+    androidTestImplementation deps.androidXTestRunner
+    androidTestImplementation deps.androidXTestEspresso
 }
